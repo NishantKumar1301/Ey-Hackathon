@@ -1,0 +1,109 @@
+
+/* Form Container Styling */
+.form-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.9); /* Transparent white for contrast */
+  text-align: center;
+}
+
+.form-container h1 {
+  margin-bottom: 20px;
+  color: #0047ab;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.form-group input:focus {
+  border-color: #0047ab;
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(0, 71, 171, 0.5);
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #0047ab;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #003580;
+}
+
+p {
+  margin-top: 15px;
+  color: #555;
+}
+
+p a {
+  color: #0047ab;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+/* Authentication Buttons */
+.auth {
+  display: flex;
+  gap: 10px; /* Space between the buttons */
+}
+
+.auth .btn {
+  text-decoration: none; /* Remove underline */
+  padding: 8px 10px; /* Slightly adjusted padding for a sleek design */
+  border-radius: 10px; /* Fully rounded corners for a pill-shaped button */
+  font-weight: bold;
+  font-size: 14px; /* Balanced font size */
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+.auth .login {
+  background-color: white;
+  color: #0047ab;
+  border: 2px solid #0047ab; /* Thicker border for emphasis */
+}
+
+.auth .signup {
+  background-color: #0047ab;
+  color: white;
+  border: 2px solid #0047ab;
+}
+
+.auth .btn:hover {
+  background-color: orange; /* Eye-catching hover color */
+  color: white; /* Ensure text color remains readable */
+  box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.5); /* Subtle glowing shadow */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}

@@ -1,0 +1,286 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: url('../images/background.webp') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: rgba(0, 47, 108, 0.8); /* Semi-transparent background */
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Logo Styling */
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none; /* Remove underline for the link */
+}
+
+.logo img {
+  width: 60px; /* Set a consistent width */
+  height: 60px; /* Set a consistent height */
+  border-radius: 50%; /* Make the logo circular */
+  object-fit: cover; /* Ensure the image fits perfectly */
+  cursor: pointer; /* Pointer cursor for the link */
+  border: 2px solid white; /* Optional: Add a border for emphasis */
+}
+
+.logo a {
+  text-decoration: none; /* Remove any text decoration */
+  display: inline-block;
+}
+
+/* Navigation Links */
+/* Navigation Links */
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    position: relative; /* Ensure positioning for the hover effect */
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px; /* Add padding to create a "box" effect */
+    border-radius: 5px; /* Smooth rounded corners */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover Effect */
+header nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Lighted box effect */
+    color: #FFD700; /* Change text color for emphasis */
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.4); /* Subtle glowing shadow */
+}
+
+
+/* Authentication Buttons */
+/* Authentication Buttons */
+.auth {
+  display: flex;
+  gap: 10px; /* Space between the buttons */
+}
+
+.auth .btn {
+  text-decoration: none; /* Remove underline */
+  padding: 10px 20px; /* Button padding */
+  border-radius: 5px; /* Rounded corners */
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.auth .login {
+  background-color: white;
+  color: #0047ab;
+  border: 1px solid #0047ab; /* Border for better visibility */
+}
+
+.auth .signup {
+  background-color: #0047ab;
+  color: white;
+  border: 1px solid #0047ab;
+}
+
+.auth .btn:hover {
+  background-color: orange; /* Darker blue for hover */
+  color: white; /* Change text color on hover */
+}
+
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.cta-buttons button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #ffd700;
+  color: #0047ab;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.cta-buttons button:hover {
+  background-color: #ffc300;
+}
+
+.search-bar {
+  margin-top: 20px;
+}
+
+.search-bar input {
+  padding: 10px;
+  width: 60%;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background-color: #ffd700;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #0047ab;
+}
+
+/* Features Section */
+.features {
+  padding: 40px 20px;
+  text-align: center;
+  color: #333;
+  margin: 20px auto;
+  max-width: 1200px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.feature-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  gap: 20px;
+}
+
+.feature {
+  display: flex; /* Flex layout for horizontal alignment */
+  align-items: center; /* Vertically center align components */
+  gap: 15px; /* Space between components */
+  width: 100%; /* Ensures consistent width */
+  max-width: 400px; /* Fixed width for all boxes */
+  text-align: left; /* Align text to the left */
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd; /* Add a light border for distinction */
+}
+
+.feature img {
+  width: 120px; /* Consistent width for images */
+  height: 120px; /* Consistent height for images */
+  object-fit: contain; /* Maintain aspect ratio */
+  border-radius: 5px; /* Optional: Rounded corners for images */
+}
+
+.feature-content {
+  display: flex;
+  flex-direction: column; /* Stack heading and text vertically */
+  gap: 8px; /* Space between heading and text */
+  flex-grow: 1; /* Ensure content takes up remaining space */
+}
+
+.feature h3 {
+  color: #0047ab;
+  margin: 0; /* Remove default margin */
+  font-size: 18px; /* Slightly larger font for emphasis */
+}
+
+.feature p {
+  color: #555;
+  margin: 0; /* Remove default margin */
+  font-size: 14px; /* Balanced font size for descriptions */
+}
+
+/* How It Works Section */
+.how-it-works {
+  padding: 40px 20px;
+  text-align: center;
+  color: #333;
+  margin: 20px auto;
+  max-width: 1200px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.steps {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.step {
+  max-width: 300px; /* Adjusted width for better layout */
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.step img {
+  width: 100%; /* Full width of the container */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 200px; /* Increased height for better visibility */
+  object-fit: contain; /* Ensure proper fit without distortion */
+  margin-bottom: 15px;
+  border-radius: 5px; /* Optional: Rounded corners for images */
+}
+
+.step h3 {
+  color: #0047ab;
+  margin-bottom: 10px;
+  font-size: 18px; /* Slightly larger for emphasis */
+}
+
+.step p {
+  color: #555;
+  font-size: 14px; /* Balanced font size */
+}
+
+/* Footer */
+footer {
+  background-color: rgba(0, 47, 108, 0.8);
+  color:black;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
