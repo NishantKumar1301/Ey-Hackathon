@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Sahaj</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/contact.css" />
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <a href="./index.html">
+          <img src="./images/logo.png" alt="Sahaj Logo" />
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Schemes</a></li>
+          <li><a href="#">How It Works</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="auth">
+        <a href="login.html" class="btn login">Login</a>
+        <a href="signup.html" class="btn signup">Sign Up</a>
+      </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact">
+      <h1>Contact Us</h1>
+      <p>
+        We'd love to hear from you! Please fill out the form below to get in
+        touch.
+      </p>
+
+      <div class="contact-details">
+        <h2>Our Details</h2>
+        <p><strong>Address:</strong> NIT Patna, Ashok Rajpath, Patna, Bihar</p>
+        <p><strong>Phone:</strong> +91-9122992931</p>
+        <p><strong>Email:</strong> nishantkumarfps@gmail.com</p>
+        <p><strong>Hours:</strong> Monday - Friday, 9 AM - 6 PM</p>
+      </div>
+
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3660.0358976737656!2d85.13829271536825!3d25.612677783693328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed5864df69d1b1%3A0x52fcb360d47c4e4e!2sNIT%20Patna!5e0!3m2!1sen!2sin!4v1671441468380!5m2!1sen!2sin"
+          width="100%"
+          height="400"
+          style="border: 0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+
+      <form id="contact-form" class="contact-form">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Enter your message"
+            rows="5"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Sahaj. All rights reserved.</p>
+    </footer>
+
+    <script>
+      // Initialize EmailJS
+      (function () {
+        emailjs.init("WGKO0EpqQ9nDAdCm7");
+      })();
+
+      // Handle form submission
+      document.getElementById("contact-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const form = this;
+
+        emailjs
+          .sendForm("service_njwqbcf", "template_1ylxcj3", form, "WGKO0EpqQ9nDAdCm7")
+          .then(
+            (result) => {
+              console.log("Success:", result.text);
+              alert("Your message has been sent successfully!");
+              form.reset();
+            },
+            (error) => {
+              console.error("Error:", error.text);
+              alert("Failed to send your message. Please try again.");
+            }
+          );
+      });
+    </script>
+  </body>
+</html>
