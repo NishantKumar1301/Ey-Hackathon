@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Sahaj</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/about.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <a href="./index.html">
+          <img src="./images/logo.png" alt="Sahaj Logo" />
+        </a>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="#">Schemes</a></li>
+          <li><a href="#">How It Works</a></li>
+          <li><a href="./about.html">About Us</a></li>
+          <li><a href="./contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- About Us Section -->
+    <section class="about">
+      <h1>Meet Our Team</h1>
+      <p>
+        We are a passionate team dedicated to empowering citizens by simplifying
+        access to government schemes. Meet the individuals behind the mission.
+      </p>
+      <div class="team">
+        <!-- Team Member 1 -->
+        <div class="team-member">
+          <img
+            src="./images/nishant.jpg"
+            alt="Nishant Kumar"
+            data-image="./images/nishant.jpg"
+            class="profile-pic"
+          />
+          <h2>Nishant Kumar</h2>
+          <p>Email: nishantkumarfps@gmail.com</p>
+          <p>Phone: +91-9122992931</p>
+          <p>
+            <strong>Skills:</strong> Full Stack Web Developer, Python, Java,
+            Django, React, HTML, CSS, JavaScript
+          </p>
+          <div class="social-links">
+            <a href="https://github.com/NishantKumar1301" target="_blank">
+              <img src="./images/github.jpeg" alt="GitHub" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/nishant-kumar-4a2293257/"
+              target="_blank"
+            >
+              <img src="./images/linkedin.png" alt="LinkedIn" />
+            </a>
+          </div>
+        </div>
+
+        <!-- Team Member 2 -->
+        <div class="team-member">
+          <img
+            src="./images/abha.jpg"
+            alt="Abha soni 
+"
+            data-image="./images/abha.jpg"
+            class="profile-pic"
+          />
+          <h2>Abha soni</h2>
+          <p>Email: Abhasoni376@gmail.com</p>
+          <p>Phone: +91-8630620300
+</p>
+          <p>
+            <strong>Skills:</strong> MERN, python, Java
+          </p>
+          <div class="social-links">
+            <a href="https://github.com/Abha7744" target="_blank">
+              <img src="./images/github.jpeg" alt="GitHub" />
+            </a>
+            <a href="https://www.linkedin.com/in/abhasoni99" target="_blank">
+              <img src="./images/linkedin.png" alt="LinkedIn" />
+            </a>
+          </div>
+        </div>
+
+        <!-- Team Member 3 -->
+        <div class="team-member">
+          <img
+            src="./images/aish.jpg"
+            alt="Aishwarya Soni"
+            data-image="./images/aish.jpg"
+            class="profile-pic"
+          />
+          <h2>Aishwarya Soni </h2>
+          <p>Email: aishwarya.soni2021@glbajajgroup.org</p>
+          <p>Phone: +91 76688 35730</p>
+          <p>
+            <strong>Skills:</strong> HTML, CSS
+          </p>
+          <div class="social-links">
+            <a href="https://github.com/Aishwaryasoni6" target="_blank">
+              <img src="./images/github.jpeg" alt="GitHub" />
+            </a>
+            <a href="https://www.linkedin.com/in/aishwarya-soni-006802219?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+              <img src="./images/linkedin.png" alt="LinkedIn" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="image-modal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modal-img" />
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Sahaj. All rights reserved.</p>
+    </footer>
+
+    <!-- Script for Modal -->
+    <script>
+      // Select all profile pictures
+      const profilePics = document.querySelectorAll('.profile-pic')
+
+      // Modal elements
+      const modal = document.getElementById('image-modal')
+      const modalImg = document.getElementById('modal-img')
+      const closeModal = document.querySelector('.close')
+
+      // Open modal
+      profilePics.forEach((pic) => {
+        pic.addEventListener('click', () => {
+          const imagePath = pic.getAttribute('data-image')
+          modal.style.display = 'block'
+          modalImg.src = imagePath // Set modal image source
+        })
+      })
+
+      // Close modal
+      closeModal.addEventListener('click', () => {
+        modal.style.display = 'none'
+      })
+
+      // Close modal on outside click
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.style.display = 'none'
+        }
+      })
+    </script>
+  </body>
+</html>
