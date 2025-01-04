@@ -1,0 +1,76 @@
+/* Schemes Section */
+.schemes {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.schemes h1 {
+  font-size: 28px;
+  color: #0047ab;
+  margin-bottom: 20px;
+}
+
+.schemes p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.scheme-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.scheme {
+  text-align: left;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: rgba(240, 240, 240, 0.9);
+  border: 1px solid #ddd;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+  color: #333;
+}
+
+.scheme:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+  background-color: rgba(230, 230, 230, 0.9);
+}
+
+.scheme h2 {
+  font-size: 20px;
+  color: #0047ab;
+  margin-bottom: 10px;
+}
+
+.scheme p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .schemes {
+    padding: 15px;
+  }
+
+  .scheme {
+    padding: 10px;
+  }
+
+  .scheme h2 {
+    font-size: 18px;
+  }
+
+  .scheme p {
+    font-size: 13px;
+  }
+}

@@ -170,6 +170,7 @@ header nav ul li a:hover {
   font-weight: bold;
   color: #0047ab;
 }
+a{text-decoration: none;}
 
 /* Features Section */
 .features {
