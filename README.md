@@ -1,120 +1,43 @@
-AI-driven Platform to Enhance Government Scheme Access
+# Array Flatten
 
-Overview
+[![NPM version][npm-image]][npm-url]
+[![NPM downloads][downloads-image]][downloads-url]
+[![Build status][travis-image]][travis-url]
+[![Test coverage][coveralls-image]][coveralls-url]
 
-This project aims to build an AI-driven platform designed to improve access to government schemes for citizens, addressing key challenges faced by users when navigating existing platforms like myScheme.gov.in.
+> Flatten an array of nested arrays into a single flat array. Accepts an optional depth.
 
-Table of Contents
+## Installation
 
-Problem Statement
+```
+npm install array-flatten --save
+```
 
-Scope of the Problem
+## Usage
 
-Solution Overview
+```javascript
+var flatten = require('array-flatten')
 
-Addressing Website Issues
+flatten([1, [2, [3, [4, [5], 6], 7], 8], 9])
+//=> [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-Use of Technology
+flatten([1, [2, [3, [4, [5], 6], 7], 8], 9], 2)
+//=> [1, 2, 3, [4, [5], 6], 7, 8, 9]
 
-Uniqueness and Innovation
+(function () {
+  flatten(arguments) //=> [1, 2, 3]
+})(1, [2, 3])
+```
 
-User Benefit and Impact
+## License
 
-Future Roadmap
+MIT
 
-Get Involved
-
-Problem Statement
-
-Key Challenges Faced by Citizens (Priya’s Scenario):
-
-Scattered information about government schemes.
-
-Long travel, queues, and missing documents hinder access.
-
-Complex eligibility and application processes.
-
-Issues with Existing Platforms (myScheme.gov.in):
-
-Limited Schemes – Only about 100 listed, lacking state-level schemes.
-
-Application Redirects – Users are often sent to external sites.
-
-Language Barriers – Available in English and Hindi only.
-
-Scope of the Problem
-
-Who is Affected?
-
-Rural citizens and users with limited tech knowledge.
-
-Pain Points:
-
-Accessibility issues, unclear instructions, and eligibility confusion.
-
-Difficulties in discovering and applying for schemes.
-
-Solution Overview
-
-AI-Powered Platform to Simplify Access to Government Schemes
-
-Automated Document Verification – Upload documents for eligibility checks.
-
-Scheme Discovery – AI suggests suitable schemes.
-
-Guided Process – Users are walked through the application steps.
-
-Addressing Website Issues
-
-Expand Scheme Listings – Include state and district-level schemes.
-
-Direct Application – Enable applications within the platform.
-
-Multilingual Support – Add regional language options.
-
-Accessibility Upgrade – Ensure PDFs and forms are disability-friendly.
-
-Translation Accuracy – Improve automated translations.
-
-Security Transparency – Inform users about data protection measures.
-
-User Feedback Form – Collect feedback directly on the platform.
-
-Use of Technology
-
-Smart Document Upload – AI verifies eligibility documents.
-
-Recommendation Engine – Matches users with relevant schemes.
-
-Proactive Alerts – Notifies users of new schemes.
-
-Uniqueness and Innovation
-
-Personalized Experience – Tailored recommendations.
-
-Proactive Automation – Reduces manual form filling.
-
-Localized Approach – Multilingual and inclusive.
-
-User Benefit and Impact
-
-Time and Cost Savings – Easier and faster access to schemes.
-
-Increased Access – Discover more schemes.
-
-Empowerment – Users gain confidence through clear steps.
-
-Future Roadmap
-
-Phase 1: Expand scheme listings and integrate state-level schemes.
-
-Phase 2: Build AI verification and recommendation engines.
-
-Phase 3: Enable direct application and expand language support.
-
-Get Involved
-
-Let’s build together to empower millions by transforming scheme access!
-
-For collaboration, questions, or feedback, feel free to reach out.
-
+[npm-image]: https://img.shields.io/npm/v/array-flatten.svg?style=flat
+[npm-url]: https://npmjs.org/package/array-flatten
+[downloads-image]: https://img.shields.io/npm/dm/array-flatten.svg?style=flat
+[downloads-url]: https://npmjs.org/package/array-flatten
+[travis-image]: https://img.shields.io/travis/blakeembrey/array-flatten.svg?style=flat
+[travis-url]: https://travis-ci.org/blakeembrey/array-flatten
+[coveralls-image]: https://img.shields.io/coveralls/blakeembrey/array-flatten.svg?style=flat
+[coveralls-url]: https://coveralls.io/r/blakeembrey/array-flatten?branch=master
