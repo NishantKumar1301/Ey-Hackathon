@@ -51,5 +51,40 @@
     <footer>
       <p>© 2025 Sahaj. All rights reserved.</p>
     </footer>
+    <Script>
+    
+            document.getElementById('loginForm').addEventListener('submit', async function (event) {
+                event.preventDefault(); // Prevent form from reloading the page
+        
+                // Get user input
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+        
+                try {
+                    // Call the backend API
+                    const response = await fetch('http://localhost:3000/login', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ username, password })
+                    });
+        
+                    const data = await response.json();
+        
+                    // Display response message to the user
+                    const responseMessage = document.getElementById('responseMessage');
+                    if (response.ok) {
+                        responseMessage.textContent = data.message; // e.g., "Login successful!"
+                        responseMessage.style.color = 'green';
+                    } else {
+                        responseMessage.textContent = data.message; // e.g., "Invalid credentials"
+                        responseMessage.style.color = 'red';
+                    }
+                } catch (error) {
+                    console.error('Error connecting to the API:', error);
+                    alert('Something went wrong. Please try again later.');
+                }
+            });
+        </script>
+
   </body>
 </html>
