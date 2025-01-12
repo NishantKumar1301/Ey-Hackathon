@@ -109,37 +109,46 @@
         </div>
       </div>
     </section>
+ <div
+      class="webchat"
+      style="
+        height: 500px;
+        width: 300px;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      "
+    >
+      <iframe
+        style="height: 100%; width: 100%; border: none;"
+        srcdoc="
+        <!doctype html>
+        <html lang='en'>
+          <head></head>
+          <body>
+            <script src='https://cdn.botpress.cloud/webchat/v2.2/inject.js'></script>
+            <script defer>
+              window.botpress.init({
+                'botId': 'd3aea06d-0f04-4701-bec3-b457caf79902',
+                'configuration': {
+                  'color': '#3B82F6',
+                  'themeMode': 'light',
+                  'fontFamily': 'Arial',
+                  'radius': 5
+                },
+                'clientId': '0e772c62-e321-46b5-a9fb-a88c5104e067'
+              });
+            </script>
+          </body>
+        </html>
+        "
+      ></iframe>
+    </div>
 
 
 
 
-
-
-    <div class="webchat" style="height: 500px; width: 300px; position: fixed; bottom: 20px; right: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-  <iframe
-    style="height: 100%; width: 100%; border: none;"
-    srcdoc='
-    <!doctype html>
-    <html lang="en">
-      <head></head>
-      <body>
-        <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
-        <script defer>
-          window.botpress.init({
-            "botId": "d3aea06d-0f04-4701-bec3-b457caf79902",
-            "configuration": {
-              "color": "#3B82F6",           <!-- Change this to any color, e.g., #FF5733 for orange -->
-              "themeMode": "light",         <!-- Change to "dark" for dark mode -->
-              "fontFamily": "Arial",        <!-- Use your favorite font, e.g., "Roboto" -->
-              "radius": 5                   <!-- Make edges rounder by increasing this number -->
-            },
-            "clientId": "0e772c62-e321-46b5-a9fb-a88c5104e067"
-          });
-        </script>
-      </body>
-    </html>'>
-  ></iframe>
-</div>
 
 
 
