@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Sahaj</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/authorisation.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <a href="./index.html">
+          <img src="./images/logo.png" alt="Sahaj Logo" />
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="scheme.html">Schemes</a></li>
+          <li><a href="work.html">How It Works</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="auth">
+        <a href="login.html" class="btn login">Login</a>
+        <a href="signup.html" class="btn signup">Sign Up</a>
+      </div>
+    </header>
+
+    <!-- Login Form -->
+    
+      <h1>Login</h1>
+      <form>
+        
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email"required />
+    
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+        
+        <button type="submit" ></button>Login</button>
+        
+      </form>
+    
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Sahaj. All rights reserved.</p>
+    </footer>
+    <Script>
+    
+            document.getElementById('loginForm').addEventListener('submit', async function (event) {
+                event.preventDefault(); // Prevent form from reloading the page
+        
+                // Get user input
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+        
+                try {
+                    // Call the backend API
+                    const response = await fetch('http://localhost:3000/login', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ username, password })
+                    });
+        
+                    const data = await response.json();
+        
+                    // Display response message to the user
+                    const responseMessage = document.getElementById('responseMessage');
+                    if (response.ok) {
+                        responseMessage.textContent = data.message; // e.g., "Login successful!"
+                        responseMessage.style.color = 'green';
+                    } else {
+                        responseMessage.textContent = data.message; // e.g., "Invalid credentials"
+                        responseMessage.style.color = 'red';
+                    }
+                } catch (error) {
+                    console.error('Error connecting to the API:', error);
+                    alert('Something went wrong. Please try again later.');
+                }
+            });
+        </script>
+
+  </body>
+</html>
